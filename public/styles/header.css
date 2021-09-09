@@ -1,25 +1,23 @@
+/* Selectors */
 header {
   height: 400px;
   display: flex;
   flex-direction: column;
   background-color: orange;
-  
   background-image: url(../images/dark-matter.png);
   color: #FFFF;
-
 }
 
+h2 {
+  margin: 0;
+}
+
+/* Classes */
 .profile {
  display: flex;
  justify-content: center;
  align-content: center;
  padding-top: 0.2em;
-  
-}
-
-h2 {
-  margin: 0;
- 
 }
 
 .lighterFont {
