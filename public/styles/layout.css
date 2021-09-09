@@ -26,4 +26,13 @@ body {
 
  body {
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+ }
+
+ main.container {
+   width: 90%;
+   background-color: #f4f1ec;
+   align-self: center;
+
  }
