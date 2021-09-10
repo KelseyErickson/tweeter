@@ -5,17 +5,16 @@ nav {
   background-color: #4056A1;
   color: #FFFF;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
   z-index: 1;
  
 }
 /* Classes */
-.arrowIcon {
-  display: flex;
-  color: rgb(241, 70, 70);
-  justify-content: center;
-
+.down-arrow-icon {
+  align-self: center;
+  color: rgb(216, 62, 62)
 }
 
 .bold {
