@@ -1,11 +1,11 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
   const charLimit = $('.counter')[0]["innerHTML"]
 
-  $('#tweet-text').on("input", function () {
+  $('#tweet-text').on("input", function() {
 
     const $counter = $(this).siblings("div").children(".counter");
-    const $textInput = $($(this)).val().length;
+    const $textInput = $(this).val().length;
     const totalChars = charLimit - $textInput;
 
     $($counter).text(totalChars);
@@ -15,11 +15,3 @@ $(document).ready(function () {
   });
 
 });
-
-
-
-
-
-
-
-
