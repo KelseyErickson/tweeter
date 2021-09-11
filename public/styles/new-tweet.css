@@ -39,3 +39,7 @@ textarea {
 form {
   width: 100%;
 }
+
+.redText {
+  color: red;
+}
