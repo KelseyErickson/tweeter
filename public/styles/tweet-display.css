@@ -3,13 +3,79 @@
   margin-top: 2em;
   display:flex;
   flex-direction: column;
-  align-items: center;
+  
 }
+
+.tweet:hover {
+ 
+  
+  box-shadow: 7px 7px #a6b2c5;;
+}
+
 
 article.tweet footer {
 
  border-top: solid;
- width: 95%;
- text-align: right;
+ width: 97%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ font-size: 60%;
+ padding: 0.5em 1em;
+ margin-bottom: 1em;
+ align-self: center;
+ 
+
+}
+
+article.tweet header {
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+ 
+}
+  
+
+.poster-profile img {
+ 
+  margin-right: 0.5em;
+  width: 2em;
+  height: 2em;
+
+}
+
+
+.tweet-handle {
+  color: #a6b2c5;
+  font-weight: 600;
+  justify-self: flex-end;
+  text-align: right;
+  
+}
+
+.user-name{
+  font-weight: 300;
+}
+
+.footer-icons .fas {
+  margin: 0.2em;
+  color: rgb(40, 74, 168)
+}
+
+.footer-icons .fas:hover {
+  color:rgb(226, 158, 32);
+}
+
+.poster-profile {
+  display: flex;
+  align-items: center;
+
+}
+
+.tweet-body{
+  margin-left: 1em;
 
 }
