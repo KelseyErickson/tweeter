@@ -1,0 +1,15 @@
+.tweet {
+  border: solid; 
+  margin-top: 2em;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article.tweet footer {
+
+ border-top: solid;
+ width: 95%;
+ text-align: right;
+
+}
