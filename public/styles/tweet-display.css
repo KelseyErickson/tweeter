@@ -7,14 +7,10 @@
 }
 
 .tweet:hover {
- 
-  
   box-shadow: 7px 7px #a6b2c5;;
 }
 
-
 article.tweet footer {
-
  border-top: solid;
  width: 97%;
  display: flex;
@@ -24,8 +20,6 @@ article.tweet footer {
  padding: 0.5em 1em;
  margin-bottom: 1em;
  align-self: center;
- 
-
 }
 
 article.tweet header {
@@ -35,10 +29,8 @@ article.tweet header {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
- 
 }
   
-
 .poster-profile img {
  
   margin-right: 0.5em;
@@ -46,7 +38,6 @@ article.tweet header {
   height: 2em;
 
 }
-
 
 .tweet-handle {
   color: #a6b2c5;
