@@ -68,5 +68,6 @@ article.tweet header {
 
 .tweet-body{
   margin-left: 1em;
+  word-wrap:break-word;
 
 }
