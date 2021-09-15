@@ -3,24 +3,49 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(function () {
+$(document).ready(function() {
 
-  const tweetData = {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+   // Fake data taken from initial-tweets.json
+   const data = [
+    {
+      "user": {
+        "name": "Newton",
+        "avatars": "https://i.imgur.com/73hZDYK.png"
+        ,
+        "handle": "@SirIsaac"
+      },
+      "content": {
+        "text": "If I have seen further it is by standing on the shoulders of giants"
+      },
+      "created_at": 1461116232227
     },
-    "content": {
-      "text": "Je pense , donc je suis"
+    {
+      "user": {
+        "name": "Descartes",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@rd"
+      },
+      "content": {
+        "text": "Je pense , donc je suis"
+      },
+      "created_at": 1461113959088
     },
-    "created_at": 1631568495771
-  }
 
-
+    {
+      "user": {
+        "name": "Kelsey",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@WHAT"
+      },
+      "content": {
+        "text": "I do not speak French"
+      },
+      "created_at": 1461113959088
+    }
+  ]
 
   const createTweetElement = (tweetData) => {
-    let $tweet = $(
+    const $tweet = $(
       `<article class="tweet">
         <header>
           <div class="poster-profile">
@@ -44,54 +69,15 @@ $(document).ready(function () {
 
   };
 
-  // Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }, 
-  
-  {
-    "user": {
-      "name": "Kelsey",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@WHAT" },
-    "content": {
-      "text": "I do not speak French"
-    },
-    "created_at": 1461113959088
-  }
-]
+  const renderTweets = (tweets) => {
 
-  
+    tweets.forEach(tweet => {
+      $('#tweets-container').append(createTweetElement(tweet));
+    });
 
-const renderTweets = (tweets) => {
+  };
 
-  tweets.forEach(tweet => {
-    $('#tweets-container').append(createTweetElement(tweet));
-  });
-  
-};
-
-renderTweets(data)
+  renderTweets(data)
 
 });
 
