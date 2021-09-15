@@ -85,8 +85,28 @@ $(document).ready(function() {
     $.post("/tweets", serializeData)
     .then(() => {
       console.log(serializeData);
+    })
+    .then((error) => {
+      console.log(error)
     });
     
   });
+
+  const loadTweets = () => {
+    
+    $.ajax({
+      url: "http://localhost:8080/tweets", 
+      method: "GET", 
+      dataType: "json", 
+      success: (tweets) => {
+      console.log(tweets)
+      }, 
+      error: (error) => {
+      console.log(error);
+      }
+      })
+      
+
+  }
 
 });
