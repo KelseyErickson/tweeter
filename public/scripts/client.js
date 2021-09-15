@@ -86,7 +86,7 @@ $(document).ready(function() {
     .then(() => {
       console.log(serializeData);
     })
-    .then((error) => {
+    .catch((error) => {
       console.log(error)
     });
     
@@ -99,14 +99,15 @@ $(document).ready(function() {
       method: "GET", 
       dataType: "json", 
       success: (tweets) => {
-      console.log(tweets)
+      return tweets;
       }, 
       error: (error) => {
-      console.log(error);
+      return error;
       }
       })
       
 
   }
 
+  loadTweets();
 });
