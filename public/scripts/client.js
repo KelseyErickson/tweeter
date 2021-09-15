@@ -93,19 +93,14 @@ $(document).ready(function() {
   });
 
   const loadTweets = () => {
-    
-    $.ajax({
-      url: "http://localhost:8080/tweets", 
-      method: "GET", 
-      dataType: "json", 
-      success: (tweets) => {
-      return tweets;
-      }, 
-      error: (error) => {
-      return error;
-      }
-      })
+
+    $.ajax('/tweets', { method: 'GET' })
+    .then(function (tweets) {
+      console.log('Success: ', tweets);
       
+    }).catch((error) => {
+      console.log(error)
+    });
 
   }
 
