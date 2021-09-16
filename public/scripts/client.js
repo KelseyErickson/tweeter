@@ -38,9 +38,23 @@ $(document).ready(function() {
 
   };
 
+  const charLimit = $('.counter')[0]["innerHTML"]
 
   $("form").on('submit', function(event) {
     event.preventDefault();
+    const tweetText= $(this).children('#tweet-text').val();
+    
+  
+    if (tweetText === ""){
+      return alert("Tweet cannot be empty");
+    }
+
+    if (tweetText.length > charLimit){
+      console.log(tweetText.length)
+     return alert("Tweet is too long");
+    }
+
+
     const serializeData = $(this).serialize(); 
     $.post("/tweets", serializeData)
     .then(() => {
