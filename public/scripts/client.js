@@ -38,52 +38,49 @@ $(document).ready(function() {
 
   };
 
-  const charLimit = $('.counter')[0]["innerHTML"]
+  const charLimit = $('.counter')[0]["innerHTML"];
 
   $("form").on('submit', function(event) {
     event.preventDefault();
-    let tweetText= $(this).children('#tweet-text').val();
+    const tweetText = $(this).children('#tweet-text').val();
     
   
-    if (tweetText === ""){
+    if (tweetText === "") {
       return alert("Tweet cannot be empty");
     }
 
-    if (tweetText.length > charLimit){
-      console.log(tweetText.length)
-     return alert("Tweet is too long");
+    if (tweetText.length > charLimit) {
+      console.log(tweetText.length);
+      return alert("Tweet is too long");
     }
     
-    const serializeData = $(this).serialize(); 
+    const serializeData = $(this).serialize();
     
     $.post("/tweets", serializeData)
-    .then(function () {
-      loadTweets();
+      .then(function() {
+        loadTweets();
       
-    })
-    .catch((error) => {
-      console.log(error)
-    });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
-    $("form")[0].reset();
+    $(this)[0].reset();
     
   });
 
   const loadTweets = () => {
 
     $.get('/tweets')
-    .then(function (tweets) {
-      renderTweets(tweets);
+      .then(function(tweets) {
+        renderTweets(tweets);
       
-    }).catch((error) => {
-      return error;
-    });
+      }).catch((error) => {
+        return error;
+      });
 
-  }
+  };
 
   loadTweets();
 
-  
-
-  
 });
