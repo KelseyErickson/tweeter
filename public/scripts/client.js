@@ -42,7 +42,7 @@ $(document).ready(function() {
 
   $("form").on('submit', function(event) {
     event.preventDefault();
-    const tweetText= $(this).children('#tweet-text').val();
+    let tweetText= $(this).children('#tweet-text').val();
     
   
     if (tweetText === ""){
@@ -53,16 +53,19 @@ $(document).ready(function() {
       console.log(tweetText.length)
      return alert("Tweet is too long");
     }
-
+    
     const serializeData = $(this).serialize(); 
     
     $.post("/tweets", serializeData)
     .then(function () {
       loadTweets();
+      
     })
     .catch((error) => {
       console.log(error)
     });
+
+    $("form")[0].reset();
     
   });
 
