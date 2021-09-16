@@ -31,9 +31,9 @@ $(document).ready(function() {
   };
 
   const renderTweets = (tweets) => {
-
+    $('#tweets-container').empty();
     tweets.forEach(tweet => {
-      $('#tweets-container').append(createTweetElement(tweet));
+      $('#tweets-container').prepend(createTweetElement(tweet));
     });
 
   };
@@ -54,11 +54,11 @@ $(document).ready(function() {
      return alert("Tweet is too long");
     }
 
-
     const serializeData = $(this).serialize(); 
+    
     $.post("/tweets", serializeData)
-    .then(() => {
-      console.log(serializeData);
+    .then(function () {
+      loadTweets();
     })
     .catch((error) => {
       console.log(error)
@@ -79,4 +79,8 @@ $(document).ready(function() {
   }
 
   loadTweets();
+
+  
+
+  
 });
