@@ -3,14 +3,14 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(function() {
+$(document).ready(function () {
 
   const safeHTML = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  
+
   const createTweetElement = (tweetData) => {
     const $tweet = $(
       `<article class="tweet">
@@ -49,46 +49,46 @@ $(document).ready(function() {
   $("form").on('submit', function(event) {
     event.preventDefault();
     const tweetText = $(this).children('#tweet-text').val();
-    
-    $('.alert').slideUp("slow", function () {
 
-      if (tweetText === "") {
+    if (tweetText === "") {
+      $('.alert').slideUp("slow", function() {
         $('.alert').slideDown("slow")
         $('.alert span').text("You cannot have an empty tweet.")
-        return
-      }
-  
-      if (tweetText.length > charLimit) {
+      });
+      return;
+    }
+
+    if (tweetText.length > charLimit) {
+      $('.alert').slideUp("slow", function() {
         $('.alert').slideDown("slow")
         $('.alert span').text("Your tweet has exceeded the maximum characters allowed.")
-       
-        return
-      }
-    
-    });
-   
+      });
+      return;
+    }
+
+
     const serializeData = $(this).serialize();
     console.log(serializeData)
-    
+
     $.post("/tweets", serializeData)
-      .then(function() {
+      .then(function () {
         loadTweets();
-      
+
       })
       .catch((error) => {
         console.log(error);
       });
 
     $(this)[0].reset();
-    
+
   });
 
   const loadTweets = () => {
 
     $.get('/tweets')
-      .then(function(tweets) {
+      .then(function (tweets) {
         renderTweets(tweets);
-      
+
       }).catch((error) => {
         return error;
       });
@@ -96,5 +96,7 @@ $(document).ready(function() {
   };
 
   loadTweets();
+
+
 
 });
