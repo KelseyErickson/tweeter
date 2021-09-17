@@ -50,20 +50,22 @@ $(document).ready(function() {
     event.preventDefault();
     const tweetText = $(this).children('#tweet-text').val();
     
-    $('.alert').slideUp("slow");
-    
-    if (tweetText === "") {
-      $('.alert span').text("You cannot have an empty tweet.")
-      $('.alert').slideDown("slow")
-      return
-    }
+    $('.alert').slideUp("slow", function () {
 
-    if (tweetText.length > charLimit) {
-      $('.alert span').text("Your tweet has exceeded the maximum characters allowed.")
-      $('.alert').slideDown("slow")
-      return
-    }
+      if (tweetText === "") {
+        $('.alert').slideDown("slow")
+        $('.alert span').text("You cannot have an empty tweet.")
+        return
+      }
+  
+      if (tweetText.length > charLimit) {
+        $('.alert').slideDown("slow")
+        $('.alert span').text("Your tweet has exceeded the maximum characters allowed.")
+       
+        return
+      }
     
+    });
    
     const serializeData = $(this).serialize();
     console.log(serializeData)
