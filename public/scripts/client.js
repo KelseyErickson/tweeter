@@ -50,11 +50,14 @@ $(document).ready(function () {
     event.preventDefault();
     const tweetText = $(this).children('#tweet-text').val();
 
+    $('.alert').slideUp("slow")
+
     if (tweetText === "") {
       $('.alert').slideUp("slow", function() {
         $('.alert').slideDown("slow")
         $('.alert span').text("You cannot have an empty tweet.")
       });
+      
       return;
     }
 
@@ -63,9 +66,9 @@ $(document).ready(function () {
         $('.alert').slideDown("slow")
         $('.alert span').text("Your tweet has exceeded the maximum characters allowed.")
       });
+
       return;
     }
-
 
     const serializeData = $(this).serialize();
     console.log(serializeData)
