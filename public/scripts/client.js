@@ -11,6 +11,7 @@ $(document).ready(function () {
     return div.innerHTML;
   };
 
+
   const createTweetElement = (tweetData) => {
     const $tweet = $(
       `<article class="tweet">
@@ -23,7 +24,7 @@ $(document).ready(function () {
         </header>
         <p class="tweet-body">${safeHTML(tweetData.content.text)}</p>
         <footer>
-          <span>10 days ago</span>
+          <span>${timeago.format(new Date())}</span>
           <div class="footer-icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
