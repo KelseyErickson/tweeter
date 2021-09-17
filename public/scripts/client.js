@@ -5,6 +5,12 @@
  */
 $(document).ready(function() {
 
+  const safeHTML = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const createTweetElement = (tweetData) => {
     const $tweet = $(
       `<article class="tweet">
@@ -15,7 +21,7 @@ $(document).ready(function() {
           </div>
           <p class="tweet-handle">${tweetData.user.handle}</p>
         </header>
-        <p class="tweet-body">${tweetData.content.text}</p>
+        <p class="tweet-body">${safeHTML(tweetData.content.text)}</p>
         <footer>
           <span>10 days ago</span>
           <div class="footer-icons">
@@ -55,6 +61,7 @@ $(document).ready(function() {
     }
     
     const serializeData = $(this).serialize();
+    console.log(serializeData)
     
     $.post("/tweets", serializeData)
       .then(function() {
