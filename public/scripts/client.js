@@ -83,7 +83,6 @@ $(document).ready(function() {
     }
 
     const serializeData = $(this).serialize();
-    console.log(serializeData);
 
     // Post request to show all the tweets on the page
     $.post("/tweets", serializeData)
@@ -92,7 +91,7 @@ $(document).ready(function() {
 
       })
       .catch((error) => {
-        console.log(error);
+        return error;
       });
 
     $(this)[0].reset(); // To reset text-area when tweet submitted
