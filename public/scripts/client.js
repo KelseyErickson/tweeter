@@ -27,7 +27,7 @@ $(document).ready(function() {
         </header>
         <p class="tweet-body">${safeHTML(tweetData.content.text)}</p>
         <footer>
-          <span>${timeago.format(new Date())}</span> 
+          <span>${timeago.format(tweetData.created_at)}</span> 
           <div class="footer-icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
