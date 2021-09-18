@@ -1,26 +1,27 @@
-/* Selectors */
+
 nav {
-  height: 120px;
-  padding: 2.5em 1.5em 0em 1.5em;
-  background-color: #4056A1;
-  color: #FFFF;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
-  z-index: 1;
+  height: 120px;
+  padding: 2.5em 1.5em 0em 1.5em;
+  background-color: #4056A1;
+  color: #FFFF;
+ 
+  /* To fix the navbar at the top */
   position:fixed;
   top: 0; 
   width: 100%;
  
 }
-/* Classes */
+
 .down-arrow-icon {
   align-self: center;
   color: rgb(216, 62, 62)
 }
 
-.bold {
+.bold { /* To bold write in the nav */
   font-weight: bold;
 }
 
