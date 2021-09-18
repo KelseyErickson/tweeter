@@ -1,7 +1,7 @@
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ * Reminder: Use (and do all your DOM work in) jQuery"s document ready function
  */
 $(document).ready(function() {
 
@@ -43,40 +43,40 @@ $(document).ready(function() {
   // Takes in the tweet information and for each adds it to the tweet container after using creatTweetElement function
   // Empties container each time it is called to not render duplicate tweets on the page
   const renderTweets = (tweets) => {
-    $('#tweets-container').empty();
+    $("#tweets-container").empty();
     tweets.forEach(tweet => {
-      $('#tweets-container').prepend(createTweetElement(tweet));
+      $("#tweets-container").prepend(createTweetElement(tweet));
     });
 
     return;
   };
 
   // To retrieve the char limit from the html
-  const charLimit = $('.counter')[0]["innerHTML"];
+  const charLimit = $(".counter")[0]["innerHTML"];
 
-  $("form").on('submit', function(event) {
+  $("form").on("submit", function(event) {
     event.preventDefault();
     //Retrieve user input from text-area for validation
-    const tweetText = $(this).children('#tweet-text').val();
+    const tweetText = $(this).children("#tweet-text").val();
 
     // Slides up alert if it is down when user resubmits tweet after error
-    $('.alert').slideUp("slow");
+    $(".alert").slideUp("slow");
 
     // Validations
     if (tweetText === "") {
       // The slide down and adding text wrapped in slideUp function to prevent message from changing before the alert is completely slid up
-      $('.alert').slideUp("slow", function() {
-        $('.alert').slideDown("slow");
-        $('.alert span').text("You cannot have an empty tweet.");
+      $(".alert").slideUp("slow", function() {
+        $(".alert").slideDown("slow");
+        $(".alert span").text("You cannot have an empty tweet.");
       });
       
       return;
     }
 
     if (tweetText.length > charLimit) {
-      $('.alert').slideUp("slow", function() {
-        $('.alert').slideDown("slow");
-        $('.alert span').text("Your tweet has exceeded the maximum characters allowed.");
+      $(".alert").slideUp("slow", function() {
+        $(".alert").slideDown("slow");
+        $(".alert span").text("Your tweet has exceeded the maximum characters allowed.");
       });
 
       return;
@@ -101,7 +101,7 @@ $(document).ready(function() {
 
   // Function to get tweets from the server and render them
   const loadTweets = () => {
-    $.get('/tweets')
+    $.get("/tweets")
       .then(function(tweets) {
         renderTweets(tweets);
 
