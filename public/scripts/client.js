@@ -3,11 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(function () {
+$(document).ready(function() {
 
-  // Function to take in html string from textarea and returns it escaped 
+  // Function to take in html string from textarea and returns it escaped
   // Prevents malicious html from entering through user input
-  const safeHTML = function (str) {
+  const safeHTML = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -60,14 +60,14 @@ $(document).ready(function () {
     const tweetText = $(this).children('#tweet-text').val();
 
     // Slides up alert if it is down when user resubmits tweet after error
-    $('.alert').slideUp("slow")
+    $('.alert').slideUp("slow");
 
     // Validations
     if (tweetText === "") {
       // The slide down and adding text wrapped in slideUp function to prevent message from changing before the alert is completely slid up
-      $('.alert').slideUp("slow", function() { 
-        $('.alert').slideDown("slow")
-        $('.alert span').text("You cannot have an empty tweet.")
+      $('.alert').slideUp("slow", function() {
+        $('.alert').slideDown("slow");
+        $('.alert span').text("You cannot have an empty tweet.");
       });
       
       return;
@@ -75,19 +75,19 @@ $(document).ready(function () {
 
     if (tweetText.length > charLimit) {
       $('.alert').slideUp("slow", function() {
-        $('.alert').slideDown("slow")
-        $('.alert span').text("Your tweet has exceeded the maximum characters allowed.")
+        $('.alert').slideDown("slow");
+        $('.alert span').text("Your tweet has exceeded the maximum characters allowed.");
       });
 
       return;
     }
 
     const serializeData = $(this).serialize();
-    console.log(serializeData)
+    console.log(serializeData);
 
     // Post request to show all the tweets on the page
     $.post("/tweets", serializeData)
-      .then(function () {
+      .then(function() {
         loadTweets();
 
       })
@@ -102,7 +102,7 @@ $(document).ready(function () {
   // Function to get tweets from the server and render them
   const loadTweets = () => {
     $.get('/tweets')
-      .then(function (tweets) {
+      .then(function(tweets) {
         renderTweets(tweets);
 
       }).catch((error) => {
