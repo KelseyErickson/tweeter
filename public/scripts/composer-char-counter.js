@@ -11,8 +11,6 @@ $(document).ready(function() {
     $($counter).text(totalChars);
 
     // To add class making text red if the counter is over the limit
-    totalChars < 0 ? $counter.addClass("redText") : $counter.removeClass("redText");
-
+    totalChars < 0 ? $counter.addClass("redText") : $counter.removeClass("redText")
   });
-  
 });
