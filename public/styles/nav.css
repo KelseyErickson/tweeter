@@ -5,14 +5,12 @@ nav {
   align-content: space-between;
   height: 120px;
   padding: 2.5em 1.5em 0em 1.5em;
-  background-color: transparent;
+  background-color:  #4056A1;
   color: #FFFF;
- 
+  width: 100%;
   /* To fix the navbar at the top */
   position:fixed;
   top: 0; 
-  width: 100%;
- 
 }
 
 .down-arrow-icon {
