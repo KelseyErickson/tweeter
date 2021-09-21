@@ -35,19 +35,16 @@ $(document).ready(function() {
           </div>
         </footer>
       </article>`);
-
     return $tweet;
-
   };
 
-  // Takes in the tweet information and for each adds it to the tweet container after using creatTweetElement function
+  // Takes in the tweet information and for each adds it to the tweet container after using createTweetElement function
   // Empties container each time it is called to not render duplicate tweets on the page
   const renderTweets = (tweets) => {
     $("#tweets-container").empty();
     tweets.forEach(tweet => {
       $("#tweets-container").prepend(createTweetElement(tweet));
     });
-
     return;
   };
 
@@ -56,6 +53,7 @@ $(document).ready(function() {
 
   $("form").on("submit", function(event) {
     event.preventDefault();
+
     //Retrieve user input from text-area for validation
     const tweetText = $(this).children("#tweet-text").val();
 
@@ -69,7 +67,6 @@ $(document).ready(function() {
         $(".alert").slideDown("slow");
         $(".alert span").text("You cannot have an empty tweet.");
       });
-      
       return;
     }
 
@@ -78,7 +75,6 @@ $(document).ready(function() {
         $(".alert").slideDown("slow");
         $(".alert span").text("Your tweet has exceeded the maximum characters allowed.");
       });
-
       return;
     }
 
@@ -88,14 +84,11 @@ $(document).ready(function() {
     $.post("/tweets", serializeData)
       .then(function() {
         loadTweets();
-
       })
       .catch((error) => {
         return error;
       });
-
     $(this)[0].reset(); // To reset text-area when tweet submitted
-
   });
 
   // Function to get tweets from the server and render them
@@ -107,9 +100,6 @@ $(document).ready(function() {
       }).catch((error) => {
         return error;
       });
-
   };
-
   loadTweets();
-
 });
