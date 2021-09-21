@@ -1,24 +1,18 @@
-/* Containers */
+/* Main Container */
 .profile-header {
-  height: 520px;
+  height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: orange;
   background-image: url(../images/dark-matter.png);
   color: #FFFF;
-}
- img {
+  width: 100%;
   margin-top: 120px;
- }
-.profile {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding-top: 0.2rem;
- }
- 
+}
 /* User Name */
-h2 {
+.profile-header h2 {
   margin: 0;
 }
 
