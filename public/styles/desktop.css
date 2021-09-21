@@ -2,29 +2,15 @@
   body {
     flex-direction: row;
     margin-top: 9rem;
-   
   }
 
   .container {
     width: 70%;
     margin-right: 3rem;
-
   }
 
   .profile-header {
     width: 50%;
-    height: 400px;
     margin: 5rem 6rem 0rem 3rem;
-    justify-content: center;
-    
   }
-
-  nav {
-    background-color: #4056A1;
-  }
-
-  img {
-    margin-top: 0;
-   }
-  
  }
