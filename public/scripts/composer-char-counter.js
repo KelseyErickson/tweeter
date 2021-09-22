@@ -8,9 +8,11 @@ $(document).ready(function() {
     const $textInput = $(this).val().length; // Accessing the text input from the text-area
     const totalChars = $charLimit - $textInput;
 
-    $($counter).text(totalChars);
-
     // To add class making text red if the counter is over the limit
-    totalChars < 0 ? $counter.addClass("redText") : $counter.removeClass("redText")
+    totalChars < 0 ? $counter.addClass("redText") : $counter.removeClass("redText");
+    
+    return $($counter).text(totalChars);
+
   });
+  
 });
