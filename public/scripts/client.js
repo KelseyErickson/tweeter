@@ -21,7 +21,7 @@ $(document).ready(function() {
         <header>
           <div class="poster-profile">
             <img src=${tweetData.user.avatars} alt="profile-pic">
-            <p class="user-name">${tweetData.user.name}</p>
+            <p class="user-name lighter-font">${tweetData.user.name}</p>
           </div>
           <p class="tweet-handle">${tweetData.user.handle}</p>
         </header>
