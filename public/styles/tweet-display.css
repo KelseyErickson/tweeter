@@ -1,16 +1,16 @@
 .tweet {
   border: solid; 
-  margin: 1em 0;
+  margin: 1.5rem 0;
   display:flex;
   flex-direction: column;
 }
 
 .tweet:hover {
-  box-shadow: 7px 7px #a6b2c5;;
+  box-shadow: 0.44rem 0.44rem #a6b2c5;;
 }
 /* Header of Tweet*/
 article.tweet header {
-  padding: 0.5em 1em;
+  padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,8 +24,8 @@ article.tweet header {
 }
 
 .poster-profile img {
-  margin-right: 0.5em;
-  width: 2em;
+  margin-right: 0.75rem;
+  width: 3rem;
 }
 
 .tweet-handle {
@@ -40,7 +40,7 @@ article.tweet header {
 
 /* Body of the Tweet */
 .tweet-body {
-  margin-left: 1em;
+  margin-left: 1.5rem;
   word-wrap:break-word;
 }
 
@@ -51,13 +51,13 @@ article.tweet footer {
  display: flex;
  justify-content: space-between;
  font-size: 60%;
- padding: 0.5em 1em;
- margin-bottom: 1em;
+ padding: 0.45rem 0.9rem;
+ margin-bottom: 0.9rem;
  align-self: center;
 }
 
 .footer-icons .fas {
-  margin: 0.2em;
+  margin: 0.18rem;
   color: rgb(40, 74, 168)
 }
 
