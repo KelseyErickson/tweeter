@@ -49,7 +49,7 @@ $(document).ready(function() {
   };
 
   // To retrieve the char limit from the html
-  const charLimit = $(".counter")[0]["innerHTML"];
+  const $charLimit = $(".counter")[0]["innerHTML"];
 
   $("form").on("submit", function(event) {
     event.preventDefault();
@@ -70,7 +70,7 @@ $(document).ready(function() {
       return;
     }
 
-    if (tweetText.length > charLimit) {
+    if (tweetText.length > $charLimit) {
       $(".alert").slideUp("slow", function() {
         $(".alert").slideDown("slow");
         $(".alert span").text("Your tweet has exceeded the maximum characters allowed.");
@@ -88,7 +88,10 @@ $(document).ready(function() {
       .catch((error) => {
         return error;
       });
+
     $(this)[0].reset(); // To reset text-area when tweet submitted
+    $('.counter').text($charLimit); // To reset the counter to char limit when form is submitted
+    
   });
 
   // Function to get tweets from the server and render them
