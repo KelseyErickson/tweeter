@@ -12,18 +12,15 @@ nav {
   position: fixed;
   top: 0;
 }
-
-.down-arrow-icon {
+nav .down-arrow-icon {
   align-self: center;
   color: #d83e3e;
 }
-
-.bold {
+nav .bold {
   /* To bold write in the nav */
   font-weight: bold;
 }
-
-.logo {
+nav .logo {
   font-family: "Bungee", sans-serif;
   font-size: 2rem;
 }

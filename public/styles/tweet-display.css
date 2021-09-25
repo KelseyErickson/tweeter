@@ -4,13 +4,11 @@
   display: flex;
   flex-direction: column;
 }
-
 .tweet:hover {
   box-shadow: 0.44rem 0.44rem #a6b2c5;
 }
-
-/* Header of Tweet*/
-article.tweet header {
+.tweet header {
+  /* Header of Tweet*/
   padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -18,12 +16,22 @@ article.tweet header {
   flex-wrap: wrap;
   width: 100%;
 }
+.tweet footer {
+  /* Footer of Tweet */
+  border-top: solid;
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 60%;
+  padding: 0.45rem 0.9rem;
+  margin-bottom: 0.9rem;
+  align-self: center;
+}
 
 .poster-profile {
   display: flex;
   align-items: center;
 }
-
 .poster-profile img {
   margin-right: 0.75rem;
   width: 3rem;
@@ -35,29 +43,16 @@ article.tweet header {
   justify-self: flex-end;
 }
 
-/* Body of the Tweet */
 .tweet-body {
+  /* Body of the Tweet */
   margin-left: 1.5rem;
   word-wrap: break-word;
-}
-
-/* Footer of Tweet */
-article.tweet footer {
-  border-top: solid;
-  width: 97%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 60%;
-  padding: 0.45rem 0.9rem;
-  margin-bottom: 0.9rem;
-  align-self: center;
 }
 
 .footer-icons .fas {
   margin: 0.18rem;
   color: #284aa8;
 }
-
 .footer-icons .fas:hover {
   color: #e29e20;
 }

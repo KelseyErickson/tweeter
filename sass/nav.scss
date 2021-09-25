@@ -13,20 +13,20 @@ nav {
   /* To fix the navbar at the top */
   position:fixed;
   top: 0; 
-}
 
-.down-arrow-icon {
-  align-self: center;
-  color: $arrow;
-}
+  .down-arrow-icon {
+    align-self: center;
+    color: $arrow;
+  }
 
-.bold { /* To bold write in the nav */
-  font-weight: bold;
-}
+  .bold { /* To bold write in the nav */
+    font-weight: bold;
+  }
 
-.logo {
-  font-family: $secondary-font;
-  font-size: 2rem;
+  .logo {
+    font-family: $secondary-font;
+    font-size: 2rem;
+  }
 }
 
 
