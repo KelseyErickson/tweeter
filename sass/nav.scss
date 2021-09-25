@@ -5,25 +5,27 @@ nav {
   align-content: space-between;
   height: 120px;
   padding: 3.75rem 2.25rem 0em 2.25rem;
-  background-color: #4056A1;
+  background-color:  #4056A1;
   color: #FFFF;
   width: 100%;
   /* To fix the navbar at the top */
-  position: fixed;
-  top: 0;
+  position:fixed;
+  top: 0; 
 }
 
 .down-arrow-icon {
   align-self: center;
-  color: #d83e3e;
+  color: rgb(216, 62, 62)
 }
 
-.bold {
-  /* To bold write in the nav */
+.bold { /* To bold write in the nav */
   font-weight: bold;
 }
 
 .logo {
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
   font-size: 2rem;
 }
+
+
+
