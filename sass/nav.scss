@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 nav {
   display: flex;
   flex-direction: column;
@@ -5,8 +7,8 @@ nav {
   align-content: space-between;
   height: 120px;
   padding: 3.75rem 2.25rem 0em 2.25rem;
-  background-color:  #4056A1;
-  color: #FFFF;
+  background-color:  $nav-background;
+  color: $bright-font;
   width: 100%;
   /* To fix the navbar at the top */
   position:fixed;
@@ -15,7 +17,7 @@ nav {
 
 .down-arrow-icon {
   align-self: center;
-  color: rgb(216, 62, 62)
+  color: $arrow;
 }
 
 .bold { /* To bold write in the nav */
@@ -23,7 +25,7 @@ nav {
 }
 
 .logo {
-  font-family: 'Bungee', sans-serif;
+  font-family: $secondary-font;
   font-size: 2rem;
 }
 

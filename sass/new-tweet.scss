@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 .new-tweet {
   display:flex;
   flex-direction: column;
@@ -22,15 +24,15 @@
 }
  
 .new-tweet button {
-  background-color: #4056A1;
-  color: #FFFF;
+  background-color: $nav-background;
+  color:$bright-font;
   border: none;
   width: 6.75rem;
   height: 2.25rem;
 }
 
 .button-container {
-  border-top: solid #545149;
+  border-top: $main-font;
   padding: 0.75rem 0.3rem 0 0;
   display: flex;
   justify-content: space-between;
@@ -40,17 +42,17 @@
 
 /* For char counter when over char limit */
 .redText {
-  color: red;
+  color: $alert;
 }
 
 /* For Error Messages */
 .alert {
-  color: red;
-  border: solid red;
+  color: $alert;
+  border: solid $alert;
   width: 100%;
   padding: 1rem;
   margin-bottom: 2rem;
   text-align: center;
   display: none;
-  background-color: rgb(255, 208, 208);
+  background-color: $alert-background;
 }

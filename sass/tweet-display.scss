@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 .tweet {
   border: solid; 
   margin: 1.5rem 0;
@@ -6,7 +8,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 0.44rem 0.44rem #a6b2c5;;
+  box-shadow: 0.44rem 0.44rem $shadow;
 }
 /* Header of Tweet*/
 article.tweet header {
@@ -29,7 +31,7 @@ article.tweet header {
 }
 
 .tweet-handle {
-  color: #a6b2c5;
+  color: $shadow;
   font-weight: 600;
   justify-self: flex-end;
 }
@@ -54,9 +56,9 @@ article.tweet footer {
 
 .footer-icons .fas {
   margin: 0.18rem;
-  color: rgb(40, 74, 168)
+  color: $icons-main;
 }
 
 .footer-icons .fas:hover {
-  color:rgb(226, 158, 32);
+  color: $icons-hover;
 }

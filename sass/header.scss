@@ -1,3 +1,4 @@
+@import "_variables.scss";
 /* Main Container */
 .profile-header {
   height: 400px;
@@ -5,9 +6,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: $header-background;
   background-image: url(../images/dark-matter.png);
-  color: #FFFF;
+  color: $bright-font;
   width: 100%;
   margin-top: 120px;
 }
