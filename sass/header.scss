@@ -1,18 +1,17 @@
-@import "abstracts/_variables.scss";
+@import "abstracts/_variables.scss", "abstracts/mixins";
+
 /* Main Container */
 .profile-header {
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include vertical-alignment;
   align-items: center;
+  height: 400px;
   background-color: $header-background;
   background-image: url(../images/dark-matter.png);
   color: $bright-font;
   width: 100%;
   margin-top: 120px;
   
-  h2 { // User-name
+  h2 { /* User-Name */
     margin: 0;
   }
 }

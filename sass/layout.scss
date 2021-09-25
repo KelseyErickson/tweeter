@@ -1,4 +1,4 @@
-@import "abstracts/_variables.scss";
+@import "abstracts/_variables.scss", "abstracts/mixins";
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -27,8 +27,7 @@ body {
  */
  body {
   font-family: 'Source Sans Pro', sans-serif;
-  display: flex;
-  flex-direction: column;
+  @include vertical-alignment;
  }
  
  .container {
